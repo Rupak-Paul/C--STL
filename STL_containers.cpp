@@ -53,6 +53,12 @@ void containers() {
         cout << e << " ";
     }
 
+    //Quickly checking 2 vectors are equal or not
+    vector<int> v1 = {1, 2, 3};
+    vector<int> v2 = {1, 2, 3};
+    if(v1 == v2) cout << "Both vector are equal" << endl;
+    else cout << "Both vector are not equal" << endl;
+
 
     //List: It is implementation of doubly linked list
     //All the operations are similar to vector

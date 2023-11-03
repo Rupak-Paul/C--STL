@@ -38,6 +38,8 @@ void algorithm() {
     sort(arr, arr+5, greater<int>()); //Sort in descending order
     sort(v.begin(), v.end());
     sort(pairArr, pairArr+6, compare);
+    sort(v.begin(), v.begin()); //First 0 elements will be sorted
+    sort(v.begin(), v.begin() + 3); //First 3 elements will be sorted
 
 
     //Binary search
@@ -76,6 +78,18 @@ void algorithm() {
     cout << __builtin_popcount(num) << endl; //prints 3
     cout << __builtin_popcountll(num2) << endl; //prints 2
 
+
+    //Generates all the permutations
+    vector<int> v = {1, 2, 3, 4};
+    do {
+        for(int e : v) cout << e << " ";
+        cout << endl;
+    } while(next_permutation(v.begin(), v.end()));
+
+
+    //abs funtion
+    abs(-23); //23
+    llabs(-432592160LL); //432592160
 }
 
 int main() {
