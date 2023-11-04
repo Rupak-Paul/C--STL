@@ -37,7 +37,9 @@ void algorithm() {
     sort(arr, arr+5);
     sort(arr, arr+5, greater<int>()); //Sort in descending order
     sort(v.begin(), v.end());
-    sort(pairArr, pairArr+6, compare);
+    sort(pairArr, pairArr+6, compare); //We don't need to write custom comparator function for pair of primitive data types
+    //Because <, >, <=, >= and == operator is already overloded in pair class, it works for primitve data types
+    sort(pairArr, pairArr+6, greater<pair<int, int>>()); //Sorts the pair in descending order {7, 10}, {4, 11}, {4, 9}, ... 
     sort(v.begin(), v.begin()); //First 0 elements will be sorted
     sort(v.begin(), v.begin() + 3); //First 3 elements will be sorted
 

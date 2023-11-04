@@ -24,6 +24,10 @@ void containers() {
     pair<int, int> p3[] = {{1, 2}, {3, 4}, {5, 6}};
     cout << p1.first << p1.second;
     cout << p2.first << p2.second.first << p2.second.second;
+    pair<int, int> p4 = {3, 2};
+    pair<int, int> p5 = {3, 3}; //>, <, >=, <=, == operators are overloded in pair, it works for primitive data types
+    if(p4 > p5) cout << "Greater"; //{3, 2} > {3, 3}: false  {3, 4} > {3, 2}: true  {3, 2} > {2, 5}: true
+    if(p4 == p5) cout << "Equal"; //{3, 3} == {3, 3}: true  {3, 2} == {3, 1}: false
 
 
     //Vector: It is implementation of dynamic array
