@@ -55,11 +55,11 @@ int main() {
     strcpy(str13, str12.c_str());
     
     //string tokenizing
-    string str14("Please split this sentence into tokens");
+    string str14("Please-split-this-sentence-into-tokens");
     vector<string> tokens;
-    char *p = strtok ((char *)str14.c_str(), " ");
-    while(p != NULL) {
-        tokens.push_back(p);
-        p = strtok(NULL, " ");
+    stringstream sstream(str14);
+    string s;
+    while(getline(sstream, s, '-')) {
+        tokens.push_back(s);
     }
 }

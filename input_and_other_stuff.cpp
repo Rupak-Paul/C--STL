@@ -47,4 +47,15 @@ int main() {
     
     //scanf function
     scanf("%d -> %d", &a, &b); //if input is "10 -> 20", then a will be 10 and b will be 20
+
+    //stringstream
+    string str = "abc def ";
+    char *cStr = "This is a string ";
+    stringstream sstream;
+    sstream << str << cStr << 123 << " " << 12.45;
+    string temp;
+    while(sstream >> temp) {
+        cout << temp << endl;
+    }
+    sstream.clear();
 }
